@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<style>
+body { background-image: url("https://images.newindianexpress.com/uploads/user/imagelibrary/2018/9/30/w900X450/Labour.jpg");
+ background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+    <h2>Signup to Enjoy Facilities</h2>
+ <form method="post">
+     {{ form.as_p }}
+     {% csrf_token %}<input type="submit" class="btn btn-primary" value="signup">
+ </form><br>
+
+  <button type="button" class="btn "><a class="nav-link" href="/accounts/login">Login</a> </button>
+
+<button type="button" class="btn bk-btn-primary"><a href="/" >To Home </a></button>
+</body>

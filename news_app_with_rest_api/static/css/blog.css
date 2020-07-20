@@ -1,0 +1,35 @@
+.container{
+    width: 60%;
+    float: left;
+    padding: 0 0 0 30px;
+    background: burlywood;
+    height: 100%;
+}
+
+.float-right {
+    width: 40%;
+    float: right;
+    padding: 10px;
+    background: azure;
+    height: 100%;
+}
+h1{
+    text-align: center;
+    border-bottom: 1px yellow;
+    padding-bottom: 10px;
+}
+body{
+    color: darkblue;
+    background:whitesmoke;
+
+}
+
+
+
+
+a{
+    color: red;
+}
+
+
+

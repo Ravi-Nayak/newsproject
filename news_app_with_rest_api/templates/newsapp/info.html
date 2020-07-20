@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static "css/blog.css"%}">
+<style>
+.footer {
+  position:fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: darkseagreen;
+  color: white;
+  text-align: center;
+}
+</style>
+
+
+</head>
+<h1 align="center" > WELCOME TO WORLD'S  NEWSPAPER  </h1>
+<div class="jumbotron" style="color:black">
+<nav class="navbar sticky-top  bg-light navbar-inverse">
+      <a class="navbar-brand" href="/">Home</a>
+    <a class="nav-link" href="accounts/logout">Logout</a>
+      <a class="nav-link" href="accounts/login">Login</a>
+      <a class="nav-link" href="/signup">Signup</a>
+</nav>
+     </div>
+<h1 style="text-align: left">INDIAN NEWS </h1>
+<div class="container" >
+    {% for new, des,lin, i in mylist %}
+
+    <img width="500" height="300"  src="{{i}}" alt="">
+    <h3>News:</h3> {{new}}
+    {{value |linebreaks}}
+
+    <h4>Description:</h4> {{des}}
+    {{value|linebreaks }}
+
+ <h4>Read more:</h4> <a href="{{lin}}">Read more</a><hr>
+    {% endfor %}
+</div>
+<div class="float-right">
+    <h1>To Read International News </h1><hr>
+    <h1>click below  links to read international news</h1><br>
+    <ol>
+        <li>
+            <h2><a href="/alg/">For al-jazeera-english News</a></h2></li>
+        <li>
+            <h2><a href="/bbc/">For BBC News</a> </h2>
+        </li>
+    </ol>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+
+
+
+    <p style="text-align:left;">
+     <a  style="color:white" href="https://www.google.com/intl/en_in/gmail/about/">CONTACT US</a>
+
+    <span style="float:right;">
+        <a style="color:white" href="https://newsapi.org/docs/authentication">ABOUT US</a>   </span>
+</p>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://email.com">Email Login</a>
+
+  </div>
+
+</footer>
